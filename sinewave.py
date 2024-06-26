@@ -36,6 +36,17 @@ def harmonic_series(
     return result
 
 
+def sum_series(result):
+    summed_y_data = numpy.empty(len(result[0][1]))
+    summed_y_data.fill(0)
+
+    for i in range(len(result)):
+        r = result[i]
+        summed_y_data = numpy.add(summed_y_data, r[1])
+
+    return summed_y_data
+
+
 def generate_odd_harmonics(max: int):
     return numpy.arange(1, max, 2)
 
